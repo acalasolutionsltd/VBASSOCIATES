@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface overflow-x-hidden selection:bg-primary selection:text-on-primary font-body-md;
+  }
+}
+
+@layer utilities {
+  .tactical-mask {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+  
+  .vertical-drive-arrow {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .group:hover .vertical-drive-arrow {
+    transform: translateX(8px);
+  }
+}
