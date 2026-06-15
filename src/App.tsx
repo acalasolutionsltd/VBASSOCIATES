@@ -10,12 +10,10 @@ import JournalSection from './components/JournalSection';
 import ContactSection from './components/ContactSection';
 import MegaFooter from './components/MegaFooter';
 import AnimatedTopo from './components/AnimatedTopo';
-import CursorGlow from './components/CursorGlow';
 
 function App() {
   return (
     <div className="min-h-screen bg-transparent font-body-md text-on-surface">
-      <CursorGlow />
       <AnimatedTopo />
       <TopNavBar />
       <main>

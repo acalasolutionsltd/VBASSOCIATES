@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative py-section-gap px-margin-desktop bg-surface-variant overflow-hidden border-t border-outline">
+    <section id="about" className="relative py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-variant overflow-hidden border-t border-outline">
       
       {/* Background Architectural Watermark */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 pointer-events-none opacity-[0.03] select-none">
@@ -25,7 +25,7 @@ const AboutSection: React.FC = () => {
               <div className="h-[1px] w-12 bg-primary"></div>
               <p className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">ESTABLISHED LEGACY</p>
             </div>
-            <h2 className="font-headline-lg text-headline-lg uppercase leading-[1.1] text-on-surface tracking-tight">
+            <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase leading-[1.1] text-on-surface tracking-tight">
               A MONOLITH OF <br/>
               <span className="text-primary italic">STRATEGIC</span><br/>
               PRECISION
@@ -63,15 +63,14 @@ const AboutSection: React.FC = () => {
             <div className="absolute top-0 bottom-0 left-1/2 w-px bg-outline"></div>
             
             <motion.div 
-              whileHover={{ backgroundColor: 'rgba(78, 66, 95, 0.03)' }}
-              className="p-8 md:p-12 transition-colors duration-500"
+              className="p-6 md:p-12 transition-colors duration-500"
             >
               <motion.p 
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="font-display-xl-mobile md:text-[80px] leading-none text-primary mb-4"
+                className="font-display-xl text-5xl md:text-[80px] leading-none text-primary mb-4"
               >
                 35+
               </motion.p>
@@ -82,15 +81,14 @@ const AboutSection: React.FC = () => {
             </motion.div>
             
             <motion.div 
-              whileHover={{ backgroundColor: 'rgba(78, 66, 95, 0.03)' }}
-              className="p-8 md:p-12 transition-colors duration-500"
+              className="p-6 md:p-12 transition-colors duration-500"
             >
               <motion.p 
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="font-display-xl-mobile md:text-[80px] leading-none text-primary mb-4"
+                className="font-display-xl text-5xl md:text-[80px] leading-none text-primary mb-4"
               >
                 3.2B
               </motion.p>

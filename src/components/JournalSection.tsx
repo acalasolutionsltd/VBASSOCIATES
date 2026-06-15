@@ -24,7 +24,7 @@ const journalEntries = [
 
 const JournalSection: React.FC = () => {
   return (
-    <section id="journal" className="relative py-section-gap px-margin-desktop bg-transparent border-t border-outline overflow-hidden">
+    <section id="journal" className="relative py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-transparent border-t border-outline overflow-hidden">
       <div className="relative z-10 max-w-container-max mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ const JournalSection: React.FC = () => {
         >
           <div>
             <span className="font-label-caps text-label-caps text-on-surface-variant mb-4 block">05. INSIGHTS</span>
-            <h2 className="font-headline-lg text-headline-lg uppercase text-on-surface">THE <span className="text-primary">JOURNAL</span></h2>
+            <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-on-surface">THE <span className="text-primary block md:inline">JOURNAL</span></h2>
           </div>
           <button className="group flex items-center gap-4 border-b border-on-surface pb-2 text-sm font-label-caps tracking-widest uppercase hover:text-primary hover:border-primary transition-colors">
             READ ALL ARTICLES

@@ -18,8 +18,16 @@ const MegaFooter: React.FC = () => {
     <>
       <section ref={containerRef} className="relative w-full h-[100vh] bg-background overflow-hidden flex flex-col items-center justify-center z-0 border-t border-outline">
       
+      {/* Layer 0: Text Overlay (Mobile Only) */}
+      <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none overflow-hidden md:hidden">
+        <h2 className="font-display-xl text-[140px] leading-[0.8] text-[#F3C19D] opacity-60 uppercase flex w-full justify-between px-4 whitespace-nowrap">
+          <span className="relative left-[-10%]">VICKY</span>
+          <span className="relative right-0">BOND</span>
+        </h2>
+      </div>
+
       {/* Layer 1 & 3: Background Asset */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
         {/* The central asset */}
         <motion.div 
           style={{ scale, y }}
@@ -36,7 +44,7 @@ const MegaFooter: React.FC = () => {
 
 
       {/* Layer 4: Corner Metadata */}
-      <div className="absolute top-12 left-12 z-20">
+      <div className="absolute top-6 left-6 md:top-12 md:left-12 z-20">
         <p className="font-label-caps text-label-caps text-[#F3C19D] tracking-widest uppercase flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#F3C19D] animate-pulse"></span>
           VB Associates
@@ -49,36 +57,31 @@ const MegaFooter: React.FC = () => {
         <a href="#" className="font-label-ui text-label-ui text-primary hover:opacity-70 transition-opacity">X</a>
       </div>
 
-      <div className="absolute bottom-12 left-12 z-20">
+      <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-20">
         <p className="font-body-lg text-[#F3C19D] font-bold">
           Global Strategic Advisory
         </p>
-        <p className="font-body-md text-[#F3C19D] max-w-[300px] mt-2">
+        <p className="font-body-md text-[#F3C19D] max-w-[300px] mt-2 hidden md:block">
           Architects of diversified excellence since 2019. 
           Building the future of infrastructure and real estate.
         </p>
       </div>
       
-      <div className="absolute bottom-12 right-12 z-20 text-right">
-        <p className="font-label-caps text-label-caps text-[#F3C19D] mb-4">Website made using:</p>
-        <div className="flex flex-col gap-2 justify-end">
-          <span className="font-label-ui text-label-ui text-[#F3C19D]">React & Vite</span>
-          <span className="font-label-ui text-label-ui text-[#F3C19D]">Tailwind CSS</span>
-          <span className="font-label-ui text-label-ui text-[#F3C19D]">Framer Motion</span>
-          <span className="font-label-ui text-label-ui text-[#F3C19D]">WebGL / Three.js</span>
-        </div>
-        </div>
+
       </section>
 
       {/* Final Copyright Footer */}
-      <footer className="w-full bg-[#0a0a0a] py-6 px-4 md:px-12 flex flex-col md:flex-row justify-between items-center z-10">
-        <p className="font-label-caps text-[11px] leading-[16px] tracking-[0.15em] font-medium text-[#888888] uppercase text-center md:text-left mb-4 md:mb-0">
+      <footer className="w-full bg-[#0a0a0a] py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4 z-10">
+        
+        <p className="font-label-caps text-[11px] leading-[16px] tracking-[0.15em] font-medium text-[#888888] uppercase text-center md:text-left">
           © 2026 VB ASSOCIATES. All rights reserved.
         </p>
-        <div className="flex flex-col md:flex-row items-center gap-4">
-          <p className="font-label-caps text-[11px] leading-[16px] tracking-[0.15em] font-medium text-[#888888] uppercase text-center md:text-right">
+        
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-3 w-full md:w-auto">
+          <p className="font-label-caps text-[10px] leading-[16px] tracking-[0.15em] font-medium text-[#888888] uppercase text-center whitespace-nowrap w-full md:w-auto border-t border-[#222] md:border-0 pt-4 md:pt-0">
             Designed & developed by <span className="text-[#F3C19D]">Acala Solutions</span>.
           </p>
+
           <div className="flex gap-4 items-center opacity-70">
             {/* WhatsApp */}
             <a href="#" className="text-[#888888] hover:text-[#F3C19D] transition-colors" aria-label="WhatsApp">

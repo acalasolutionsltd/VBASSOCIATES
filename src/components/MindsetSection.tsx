@@ -23,8 +23,8 @@ const MindsetSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-section-gap px-margin-desktop bg-transparent border-t border-outline overflow-hidden">
-      <div className="relative z-10 max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+    <section className="relative py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-transparent border-t border-outline overflow-hidden">
+      <div className="relative z-10 max-w-container-max mx-auto flex flex-col lg:flex-row border border-outline rounded-[24px] overflow-hidden shadow-2xl bg-surface/80 backdrop-blur-2xl">
         
         {/* Image Column */}
         <motion.div 
@@ -32,28 +32,25 @@ const MindsetSection: React.FC = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="lg:col-span-5 mb-16 lg:mb-0 h-full"
+          className="lg:w-5/12 border-b lg:border-b-0 lg:border-r border-outline relative min-h-[400px] lg:min-h-[600px]"
         >
-          <div className="relative h-full min-h-[600px] overflow-hidden bg-surface border border-outline rounded-[2rem]">
-            <img 
-              src={mindsetImage} 
-              alt="The Mindset" 
-              className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
-            />
-            <div className="absolute inset-0 border border-on-surface/5 m-4 pointer-events-none rounded-xl"></div>
-          </div>
+          <img 
+            src={mindsetImage} 
+            alt="The Mindset" 
+            className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
+          />
         </motion.div>
 
-        {/* Text Column - Frosted Glass Panel */}
+        {/* Text Column */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center h-full p-10 md:p-12 lg:p-16 rounded-[2rem] bg-surface/80 backdrop-blur-2xl border border-outline shadow-2xl"
+          className="lg:w-7/12 flex flex-col justify-center h-auto p-6 md:p-12 lg:p-16 relative z-20"
         >
-          <motion.h2 variants={itemVariants} className="font-headline-lg text-headline-lg mb-10 uppercase leading-tight text-on-surface">
-            THE <span className="text-primary">MINDSET</span>
+          <motion.h2 variants={itemVariants} className="font-headline-lg text-4xl md:text-headline-lg-mobile lg:text-headline-lg mb-8 uppercase leading-tight text-on-surface">
+            THE <span className="text-primary block sm:inline">MINDSET</span>
           </motion.h2>
 
           <div className="space-y-6">

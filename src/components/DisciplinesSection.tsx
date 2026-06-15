@@ -22,7 +22,7 @@ const disciplinesData = [
 
 const DisciplinesSection: React.FC = () => {
   return (
-    <section id="disciplines" className="relative py-section-gap px-margin-desktop bg-surface-variant border-t border-outline overflow-hidden">
+    <section id="disciplines" className="relative py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-variant border-t border-outline overflow-hidden">
       
       {/* Background Architectural Watermark */}
       <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none opacity-[0.03] select-none flex flex-col justify-center w-full z-0">
@@ -40,10 +40,10 @@ const DisciplinesSection: React.FC = () => {
           className="mb-16 md:mb-24"
         >
           <span className="font-label-caps text-label-caps text-on-surface-variant mb-4 block">THE DNA</span>
-          <h2 className="font-headline-lg text-headline-lg uppercase text-on-surface max-w-4xl">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-on-surface max-w-4xl">
             HOW WE <span className="text-primary">WORK</span>.
           </h2>
-          <p className="text-2xl lg:text-3xl leading-relaxed mt-6 max-w-3xl text-on-surface-variant font-medium">
+          <p className="text-lg md:text-xl lg:text-3xl leading-relaxed mt-6 max-w-3xl text-on-surface-variant font-medium">
             This is the operational blueprint that drives VB Associates. Our disciplines form the foundational DNA applied across every sector we touch.
           </p>
         </motion.div>

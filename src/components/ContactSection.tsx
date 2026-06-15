@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ContactSection: React.FC = () => {
   return (
-    <section className="relative py-section-gap px-margin-desktop bg-transparent overflow-hidden">
+    <section className="relative py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-transparent overflow-hidden">
       <div className="relative z-10 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start">
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
@@ -12,7 +12,7 @@ const ContactSection: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl w-full"
         >
-          <h2 className="font-headline-lg text-headline-lg mb-12 uppercase text-on-surface">CONNECT WITH <span className="text-primary">THE BOARD</span></h2>
+          <h2 className="font-headline-lg text-4xl md:text-headline-lg-mobile lg:text-headline-lg mb-8 md:mb-12 uppercase text-on-surface">CONNECT WITH <span className="text-primary block md:inline">THE BOARD</span></h2>
           <form className="space-y-12" onSubmit={(e) => e.preventDefault()}>
             <div className="relative">
               <label className="block font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase">FULL NAME</label>

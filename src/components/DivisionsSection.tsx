@@ -40,23 +40,23 @@ const DivisionsSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="relative py-section-gap px-margin-desktop bg-transparent w-full overflow-hidden">
+    <section id="services" className="relative py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-transparent w-full overflow-hidden">
       <div className="relative z-10 max-w-container-max mx-auto w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex justify-between items-end mb-16"
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6"
         >
-          <h2 className="font-headline-lg text-headline-lg uppercase text-on-surface text-left">OUR <span className="text-primary">SPECIALIZATIONS</span></h2>
-          <p className="font-label-caps text-label-caps text-on-surface-variant max-w-xs text-right">DYNAMIC SYNERGY ACROSS HIGH-STAKES INDUSTRIES</p>
+          <h2 className="font-headline-lg text-4xl md:text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface text-left">OUR <span className="text-primary block md:inline">SPECIALIZATIONS</span></h2>
+          <p className="font-label-caps text-label-caps text-on-surface-variant max-w-xs text-left md:text-right">DYNAMIC SYNERGY ACROSS HIGH-STAKES INDUSTRIES</p>
         </motion.div>
         
         <div className="flex flex-col gap-16 w-full">
           
           {/* VB Motors - Image 40%, Solid Text Block 60% */}
-          <div className="flex flex-row overflow-hidden rounded-[2rem] bg-[#988E8B] shadow-xl w-full">
+          <div className="flex flex-col md:flex-row overflow-hidden rounded-[2rem] bg-[#988E8B] shadow-xl w-full">
             
             {/* Image Slider Container (40% Width) */}
             <motion.div 
@@ -64,7 +64,7 @@ const DivisionsSection: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="w-[40%] relative min-h-[600px] group flex-shrink-0"
+              className="w-full md:w-[40%] relative min-h-[300px] md:min-h-[600px] group flex-shrink-0"
             >
               <AnimatePresence initial={false}>
                 <motion.img 
@@ -103,14 +103,14 @@ const DivisionsSection: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="w-[60%] flex flex-col justify-center px-16 lg:px-24 py-16 text-[#1A1A1A] flex-shrink-0"
+              className="w-full md:w-[60%] flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12 md:py-16 text-[#1A1A1A] flex-shrink-0"
             >
               <div className="flex items-center gap-4 mb-6">
                 <span className="font-label-caps text-label-caps opacity-60 text-[#1A1A1A]">01. PERFORMANCE</span>
               </div>
-              <h3 className="text-4xl lg:text-5xl font-bold tracking-tight mb-8 uppercase text-[#1A1A1A] drop-shadow-sm">VB MOTORS</h3>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 md:mb-8 uppercase text-[#1A1A1A] drop-shadow-sm">VB MOTORS</h3>
               
-              <p className="text-[28px] lg:text-[32px] leading-[1.4] font-medium mb-16 tracking-tight text-[#1A1A1A]">
+              <p className="text-lg md:text-[28px] lg:text-[32px] leading-[1.4] font-medium mb-12 md:mb-16 tracking-tight text-[#1A1A1A]">
                 Engineering the future of automotive luxury and competitive performance sports. Nothing is built before precision is ensured.
               </p>
               
@@ -125,14 +125,14 @@ const DivisionsSection: React.FC = () => {
           </div>
 
           {/* VB Real Estate - Placeholder (Alternating Layout) */}
-          <div className="flex flex-row-reverse overflow-hidden rounded-[2rem] bg-[#D7D1C9] shadow-xl w-full">
+          <div className="flex flex-col md:flex-row-reverse overflow-hidden rounded-[2rem] bg-[#D7D1C9] shadow-xl w-full">
             
             <motion.div 
               variants={imageVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="w-[40%] relative min-h-[600px] bg-[#C1BAB2] flex items-center justify-center border-l border-outline flex-shrink-0"
+              className="w-full md:w-[40%] relative min-h-[300px] md:min-h-[600px] bg-[#C1BAB2] flex items-center justify-center border-b md:border-b-0 md:border-l border-outline flex-shrink-0"
             >
                <span className="material-symbols-outlined text-5xl text-[#1A1A1A]/40">domain</span>
             </motion.div>
@@ -142,14 +142,14 @@ const DivisionsSection: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="w-[60%] flex flex-col justify-center px-16 lg:px-24 py-16 text-[#1A1A1A] flex-shrink-0"
+              className="w-full md:w-[60%] flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12 md:py-16 text-[#1A1A1A] flex-shrink-0"
             >
               <div className="flex items-center gap-4 mb-6">
                 <span className="font-label-caps text-label-caps opacity-60 text-[#1A1A1A]">02. PORTFOLIO</span>
               </div>
-              <h3 className="text-4xl lg:text-5xl font-bold tracking-tight mb-8 uppercase text-[#1A1A1A] drop-shadow-sm">VB REAL ESTATE</h3>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 md:mb-8 uppercase text-[#1A1A1A] drop-shadow-sm">VB REAL ESTATE</h3>
               
-              <p className="text-[28px] lg:text-[32px] leading-[1.4] font-medium mb-16 tracking-tight text-[#1A1A1A]">
+              <p className="text-lg md:text-[28px] lg:text-[32px] leading-[1.4] font-medium mb-12 md:mb-16 tracking-tight text-[#1A1A1A]">
                 Curating a legacy of iconic properties globally. Every development begins by reading the skyline honestly, deciding what the new landmark should add.
               </p>
               
@@ -164,14 +164,14 @@ const DivisionsSection: React.FC = () => {
           </div>
 
           {/* VB Constructions - Placeholder */}
-          <div className="flex flex-row overflow-hidden rounded-[2rem] bg-[#A5A0A1] shadow-xl w-full">
+          <div className="flex flex-col md:flex-row overflow-hidden rounded-[2rem] bg-[#988E8B] shadow-xl w-full">
             
             <motion.div 
               variants={imageVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="w-[40%] relative min-h-[600px] bg-[#8F8A8B] flex items-center justify-center border-r border-outline flex-shrink-0"
+              className="w-full md:w-[40%] relative min-h-[300px] md:min-h-[600px] bg-[#8F8A8B] flex items-center justify-center border-b md:border-b-0 md:border-r border-outline flex-shrink-0"
             >
                <span className="material-symbols-outlined text-5xl text-[#1A1A1A]/40">engineering</span>
             </motion.div>
@@ -181,20 +181,20 @@ const DivisionsSection: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="w-[60%] flex flex-col justify-center px-16 lg:px-24 py-16 text-[#1A1A1A] flex-shrink-0"
+              className="w-full md:w-[60%] flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12 md:py-16 text-[#1A1A1A] flex-shrink-0"
             >
               <div className="flex items-center gap-4 mb-6">
                 <span className="font-label-caps text-label-caps opacity-60 text-[#1A1A1A]">03. INFRASTRUCTURE</span>
               </div>
-              <h3 className="text-4xl lg:text-5xl font-bold tracking-tight mb-8 uppercase text-[#1A1A1A] drop-shadow-sm">VB CONSTRUCTIONS</h3>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 md:mb-8 uppercase text-[#1A1A1A] drop-shadow-sm">VB CONSTRUCTIONS</h3>
               
-              <p className="text-[28px] lg:text-[32px] leading-[1.4] font-medium mb-16 tracking-tight text-[#1A1A1A]">
+              <p className="text-lg md:text-[28px] lg:text-[32px] leading-[1.4] font-medium mb-12 md:mb-16 tracking-tight text-[#1A1A1A]">
                 Delivering complex infrastructure and high-specification developments. We execute large-scale engineering with an unwavering commitment to safety.
               </p>
               
               <a 
                 href="#constructions"
-                className="group flex justify-between items-center w-full max-w-xs border border-[#1A1A1A] text-[#1A1A1A] py-4 px-6 text-sm font-semibold tracking-widest uppercase hover:bg-[#1A1A1A] hover:text-[#A5A0A1] transition-colors duration-300"
+                className="group flex justify-between items-center w-full max-w-xs border border-[#1A1A1A] text-[#1A1A1A] py-4 px-6 text-sm font-semibold tracking-widest uppercase hover:bg-[#1A1A1A] hover:text-[#988E8B] transition-colors duration-300"
               >
                 ENTER DIVISION
                 <span className="text-xl leading-none transition-transform group-hover:rotate-90">+</span>

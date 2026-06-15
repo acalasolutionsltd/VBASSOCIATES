@@ -87,7 +87,7 @@ const ProjectsSection: React.FC = () => {
       <div className="relative z-10 w-full">
         
         {/* Header Container */}
-        <div className="w-full z-20 px-margin-desktop max-w-container-max mx-auto mb-12 lg:mb-20">
+        <div className="w-full z-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12 lg:mb-20">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,9 +97,9 @@ const ProjectsSection: React.FC = () => {
           >
             <div>
               <span className="font-label-caps text-label-caps text-on-surface-variant mb-4 block">04. PORTFOLIO</span>
-              <h2 className="font-headline-lg text-headline-lg uppercase text-on-surface">SELECTED <span className="text-primary">PROJECTS</span></h2>
+              <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-on-surface">SELECTED <span className="text-primary block md:inline">PROJECTS</span></h2>
             </div>
-            <button className="group flex items-center gap-4 border-b border-on-surface pb-2 text-sm font-label-caps tracking-widest uppercase hover:text-primary hover:border-primary transition-colors">
+            <button className="group flex items-center gap-4 border-b border-on-surface pb-2 text-sm font-label-caps tracking-widest uppercase hover:text-primary hover:border-primary transition-colors mt-4 md:mt-0">
               VIEW ALL WORK
               <span className="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_right_alt</span>
             </button>
@@ -107,7 +107,7 @@ const ProjectsSection: React.FC = () => {
         </div>
 
         {/* Swipeable Horizontal Gallery */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 px-margin-desktop pb-12 pt-4 hide-scrollbar">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 px-margin-mobile md:px-margin-desktop pb-12 pt-4 hide-scrollbar">
           
           {/* Spacer to align first item with container max width */}
           <div className="w-[calc((100vw-min(100vw,1600px))/2)] flex-shrink-0 hidden xl:block"></div>
@@ -119,7 +119,7 @@ const ProjectsSection: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[90vw] md:w-[80vw] lg:w-[65vw] xl:w-[1000px] snap-center bg-surface border border-outline rounded-[2.5rem] p-8 md:p-12 shadow-xl"
+              className="flex-shrink-0 w-[95vw] md:w-[90vw] lg:w-[85vw] xl:w-[1400px] snap-center bg-surface border border-outline rounded-[2.5rem] p-8 md:p-12 shadow-xl"
             >
               {/* Division Header */}
               <div className="flex justify-between items-center mb-10 pb-6 border-b border-outline">
@@ -136,29 +136,29 @@ const ProjectsSection: React.FC = () => {
                     <img src={division.featured.img} alt={division.featured.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
                   </div>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="text-xl md:text-2xl font-bold uppercase mb-2">{division.featured.title}</h4>
-                      <p className="text-on-surface-variant text-sm">{division.featured.desc}</p>
-                    </div>
-                    <span className="font-label-caps text-xs opacity-60 bg-surface-variant px-3 py-1 rounded-full">{division.featured.year}</span>
-                  </div>
-                </div>
-
-                {/* Secondary Projects */}
-                <div className="md:col-span-5 flex flex-col gap-8 justify-end">
-                  {division.secondary.map((sec, idx) => (
-                    <div key={idx} className="group cursor-pointer">
-                      <div className="relative overflow-hidden aspect-[16/9] mb-4 rounded-xl">
-                        <img src={sec.img} alt={sec.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl md:text-2xl font-bold uppercase mb-2">{division.featured.title}</h4>
+                        <p className="text-on-surface-variant text-sm">{division.featured.desc}</p>
                       </div>
-                      <h4 className="text-lg md:text-xl font-bold uppercase mb-1">{sec.title}</h4>
-                      <p className="text-on-surface-variant text-xs">{sec.desc}</p>
+                      <span className="font-label-caps text-xs opacity-60 bg-surface-variant px-3 py-1 rounded-full">{division.featured.year}</span>
                     </div>
-                  ))}
-                </div>
+                  </div>
 
-              </div>
+                  {/* Secondary Projects */}
+                  <div className="md:col-span-5 flex flex-col gap-8 justify-end">
+                    {division.secondary.map((sec, idx) => (
+                      <div key={idx} className="group cursor-pointer">
+                        <div className="relative overflow-hidden aspect-[16/9] mb-4 rounded-xl">
+                          <img src={sec.img} alt={sec.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                        </div>
+                        <h4 className="text-lg md:text-xl font-bold uppercase mb-1">{sec.title}</h4>
+                        <p className="text-on-surface-variant text-xs">{sec.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
             </motion.div>
           ))}
 

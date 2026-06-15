@@ -36,8 +36,8 @@ const TopNavBar: React.FC = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-surface/90 backdrop-blur-md border-b border-outline-variant">
-      <div className="flex justify-between items-center px-margin-desktop py-3 w-full max-w-container-max mx-auto">
-        <a className="font-headline-md text-headline-md text-on-surface tracking-tighter" href="#">VB ASSOCIATES</a>
+      <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-3 w-full max-w-container-max mx-auto">
+        <a className="font-headline-md text-3xl md:text-headline-md text-on-surface tracking-tighter whitespace-nowrap" href="#">VB ASSOCIATES</a>
         <div className="hidden md:flex gap-10 items-center">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href;
