@@ -26,21 +26,13 @@ const Hero: React.FC = () => {
             EXPLORE PORTFOLIO
             <span className="material-symbols-outlined vertical-drive-arrow">arrow_forward</span>
           </button>
-          <button className="group flex items-center justify-center gap-4 border border-on-surface/20 px-6 md:px-12 py-5 font-label-caps text-label-caps uppercase hover:border-primary hover:text-primary transition-colors tactical-mask w-full md:w-auto">
+          <button className="group flex items-center justify-center gap-4 border border-on-surface/20 px-6 md:px-12 py-5 font-label-caps text-label-caps uppercase hover:border-primary hover:text-primary transition-colors w-full md:w-auto">
             VIEW INVESTOR RELATIONS
-            <span className="material-symbols-outlined vertical-drive-arrow">north_east</span>
+            <span className="material-symbols-outlined vertical-drive-arrow">arrow_forward</span>
           </button>
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.4 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-on-surface"
-      >
-        <span className="material-symbols-outlined text-4xl">expand_more</span>
-      </motion.div>
     </section>
   );
 };
