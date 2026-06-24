@@ -20,10 +20,10 @@ export default {
         "primary": "#1F2A44",
         "on-primary": "#FFFFFF",
         "primary-hover": "#172033",
-        "secondary": "#6A5A7D",
+        "secondary": "#1F2A44",
         "on-secondary": "#FFFFFF",
-        "tertiary": "#B7ACC6",
-        "on-surface-variant": "#6A5A7D"
+        "tertiary": "#1F2A44",
+        "on-surface-variant": "#1F2A44"
       },
       fontFamily: {
         "label-caps": ["JetBrains Mono", "monospace"],

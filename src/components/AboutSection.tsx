@@ -35,7 +35,7 @@ const AboutSection: React.FC = () => {
           <div className="hidden md:block mt-24">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 20H40M20 0V40" stroke="#D7D1C9" strokeWidth="1"/>
-              <circle cx="20" cy="20" r="4" fill="#4E425F"/>
+              <circle cx="20" cy="20" r="4" fill="#1F2A44"/>
             </svg>
           </div>
         </motion.div>
